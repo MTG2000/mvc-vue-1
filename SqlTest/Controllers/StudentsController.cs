@@ -24,10 +24,7 @@ namespace SqlTest.Controllers
         // GET: api/Students
         public async Task<IEnumerable<Student>> GetStudents()
         {
-            Console.WriteLine("JJJ");
             return  await db.Students.ToListAsync();
-      
-
         }
 
         public async Task<IHttpActionResult> GetStudent(int id)
