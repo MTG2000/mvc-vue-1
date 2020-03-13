@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewBag.Title = "Todos";
+}
+
+<h2>All Todos</h2>
+<div>
+    @for (int i = 0; i < ViewBag.Todos.Length; i++)
+    {
+        <div>
+            @(i+1))  @ViewBag.Todos[i]
+        </div>
+    }
+</div>
