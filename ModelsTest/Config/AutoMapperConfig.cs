@@ -22,7 +22,7 @@ namespace ModelsTest.Config
 
                 cfg.CreateMap<Account, AccountDTO>();     
                 cfg.CreateMap<AccountDTO, Account>();
-                cfg.CreateMap<CreateAccountInput, Account>();
+                cfg.CreateMap<CreateAccountDTO, Account>();
 
                 #endregion
             });

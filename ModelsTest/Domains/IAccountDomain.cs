@@ -12,7 +12,9 @@ namespace ModelsTest.Domains
     {
         IEnumerable<AccountDTO> GetAll();
 
-        void CreateAccount(CreateAccountInput input);
+        void CreateAccount(CreateAccountDTO input);
+
+        AccountDTO GetAccount(Guid id);
 
     }
 }

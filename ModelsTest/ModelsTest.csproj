@@ -141,7 +141,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Domains\AccountDomain.cs" />
     <Compile Include="Domains\IAccountDomain.cs" />
-    <Compile Include="DTO\Account\CreateAccountInput.cs" />
+    <Compile Include="DTO\Account\CreateAccountDTO.cs" />
     <Compile Include="DTO\Account\AccountDTO.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -187,6 +187,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Accounts\Create.cshtml" />
     <Content Include="Views\Accounts\Index.cshtml" />
+    <Content Include="Views\Accounts\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

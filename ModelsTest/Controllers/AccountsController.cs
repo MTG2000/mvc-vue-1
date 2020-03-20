@@ -27,9 +27,10 @@ namespace ModelsTest.Controllers
         }
 
         // GET: Accounts/Details/5
-        public ActionResult Details(int id)
+        public ActionResult Details(Guid id)
         {
-            return View();
+            var account = accountDomain.GetAccount(id);
+            return View(account);
         }
 
         // GET: Accounts/Create
@@ -40,7 +41,7 @@ namespace ModelsTest.Controllers
 
         // POST: Accounts/Create
         [HttpPost]
-        public ActionResult Create(CreateAccountInput account)
+        public ActionResult Create(CreateAccountDTO account)
         {
             try
             {
