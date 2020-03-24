@@ -139,10 +139,7 @@
     <Compile Include="Config\AutoMapperConfig.cs" />
     <Compile Include="Controllers\AccountsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Domains\AccountDomain.cs" />
-    <Compile Include="Domains\IAccountDomain.cs" />
-    <Compile Include="DTO\Account\CreateAccountDTO.cs" />
-    <Compile Include="DTO\Account\AccountDTO.cs" />
+    <Compile Include="ViewModels\Account\CreateAccountVM.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -204,6 +201,12 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MyLibrary\MyLibrary.csproj">
+      <Project>{1f273048-14cd-4443-97eb-64fe18b963d2}</Project>
+      <Name>MyLibrary</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using ModelsTest.DTO;
 using ModelsTest.Models;
+using MyLibrary.DTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,7 +23,7 @@ namespace ModelsTest.Config
 
                 cfg.CreateMap<Account, AccountDTO>();     
                 cfg.CreateMap<AccountDTO, Account>();
-                cfg.CreateMap<CreateAccountDTO, Account>();
+                cfg.CreateMap<CreateAccountVM, Account>();
 
                 #endregion
             });

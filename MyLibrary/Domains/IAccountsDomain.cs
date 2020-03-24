@@ -1,20 +1,20 @@
-﻿using ModelsTest.DTO;
-using ModelsTest.Models;
+﻿using MyLibrary.DTO;
+using MyLibrary.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ModelsTest.Domains
+namespace MyLibrary.Domains
 {
-    public interface IAccountDomain
+
+    public interface IAccountsDomain
     {
         IEnumerable<AccountDTO> GetAll();
 
-        void CreateAccount(CreateAccountDTO input);
-
         AccountDTO GetAccount(Guid id);
 
+        void AddAccount(string email,string password,string work);
     }
 }

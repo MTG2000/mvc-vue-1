@@ -6,7 +6,7 @@ using System.Web;
 
 namespace ModelsTest.DTO
 {
-    public class CreateAccountDTO
+    public class CreateAccountVM
     {
         [Required(ErrorMessage = "Please enter the user's email")]
         [EmailAddress(ErrorMessage = "The Email Address is not valid")]

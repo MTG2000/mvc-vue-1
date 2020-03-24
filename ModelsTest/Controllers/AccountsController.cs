@@ -1,19 +1,19 @@
-﻿using ModelsTest.Domains;
-using ModelsTest.DTO;
-using ModelsTest.Models;
+﻿using ModelsTest.DTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using MyLibrary.Domains;
+
 
 namespace ModelsTest.Controllers
 {
     public class AccountsController : Controller
     {
-        private readonly IAccountDomain accountDomain;
+        private readonly IAccountsDomain accountDomain;
 
-        public AccountsController(IAccountDomain accountDomain)
+        public AccountsController(IAccountsDomain accountDomain)
         {
             this.accountDomain = accountDomain;
         }
@@ -23,12 +23,15 @@ namespace ModelsTest.Controllers
         public ActionResult Index()
         {
             var accounts = accountDomain.GetAll();
+
             return View(accounts);
+
         }
 
         // GET: Accounts/Details/5
         public ActionResult Details(Guid id)
         {
+
             var account = accountDomain.GetAccount(id);
             return View(account);
         }
@@ -41,15 +44,16 @@ namespace ModelsTest.Controllers
 
         // POST: Accounts/Create
         [HttpPost]
-        public ActionResult Create(CreateAccountDTO account)
+        public ActionResult Create(CreateAccountVM account)
         {
+            
             try
             {
                 if (!ModelState.IsValid)
                 {
                     return View(account);
                 }
-                accountDomain.CreateAccount(account);
+                accountDomain.AddAccount(account.Email, account.Password, account.Work);
                 return RedirectToAction("Index");
             }
             catch
