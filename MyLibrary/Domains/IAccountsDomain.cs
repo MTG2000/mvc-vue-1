@@ -16,5 +16,7 @@ namespace MyLibrary.Domains
         AccountDTO GetAccount(Guid id);
 
         void AddAccount(string email,string password,string work);
+
+        void DeleteAccount(Guid id);
     }
 }

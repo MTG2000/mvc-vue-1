@@ -42,6 +42,11 @@ namespace MyLibrary.Domains
             });
         }
 
+        public void DeleteAccount(Guid id)
+        {
+            accounts = accounts.Where(a => a.Id != id).ToList();
+        }
+
         public AccountDTO GetAccount(Guid id)
         {
             var account = accounts.ToList().Find(a => a.Id == id);

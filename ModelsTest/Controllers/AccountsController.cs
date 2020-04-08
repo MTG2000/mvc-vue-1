@@ -23,7 +23,6 @@ namespace ModelsTest.Controllers
         public ActionResult Index()
         {
             var accounts = accountDomain.GetAll();
-
             return View(accounts);
 
         }
@@ -33,6 +32,7 @@ namespace ModelsTest.Controllers
         {
 
             var account = accountDomain.GetAccount(id);
+            
             return View(account);
         }
 
